@@ -17,6 +17,6 @@
         "url": "https://github.com/wuuli/node-project.git"
     },
     "dependencies": {
-        "koa": "2.0.0"
+        "koa": "^2.11.0"
     }
 }
