@@ -1,20 +1,22 @@
 {
-    "name": "hello-koa2",
+    "name": "use-nunjucks",
     "version": "1.0.0",
-    "description": "Hello Koa 2 example with async",
+    "description": "Test nunjucks",
     "main": "app.js",
     "scripts": {
         "start": "app.js"
     },
     "keywords": [
-        "koa",
-        "async"
+        "nunjucks",
+        "templating"
     ],
     "author": "Xulin",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wuuli/node-project.git"
+    },
     "dependencies": {
-        "koa": "^2.11.0",
-        "koa-bodyparser": "3.2.0",
-        "koa-router": "7.0.0"
+        "nunjucks": "2.4.2"
     }
 }

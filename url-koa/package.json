@@ -1,5 +1,5 @@
 {
-    "name": "hello-koa2",
+    "name": "url-koa",
     "version": "1.0.0",
     "description": "Hello Koa 2 example with async",
     "main": "app.js",
@@ -12,6 +12,10 @@
     ],
     "author": "Xulin",
     "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wuuli/node-project.git"
+    },
     "dependencies": {
         "koa": "2.0.0",
         "koa-router": "7.0.0",
