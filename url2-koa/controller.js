@@ -7,7 +7,7 @@ function addMapping(router, mapping) {
         if (url.startsWith('GET ')) {
             let path = url.substring(4);
             router.get(path, mapping[url]);
-            console.log(`register URL mapping: POST ${path}`);
+            console.log(`register URL mapping: GET ${path}`);
         } else if (url.startsWith('POST ')) {
             let path = url.substring(5);
             router.post(path, mapping[url]);
