@@ -17,6 +17,6 @@
         "url": "https://github.com/wuuli/node-project.git"
     },
     "dependencies": {
-        "nunjucks": "2.4.2"
+        "nunjucks": "2.4.3"
     }
 }
