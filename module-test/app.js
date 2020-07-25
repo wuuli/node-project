@@ -1,28 +1,23 @@
 'use strict';
 
-let http = require('http');
-let fs = require('fs');
-let url = require('url');
-let path = require('path');
+// const crypto = require('crypto');
+const fs = require('fs');
 
-let root = path.resolve(process.argv[2] || '.');
+// function loadKey(file) {
+//     return fs.readFileSync(file, 'utf8')
+// }
 
-let server = http.createServer(function (request, response) {
-    let pathname = url.parse(request.url).pathname;
-    let filepath = path.join(root, pathname);
-    fs.stat(filepath, function (err, stats) {
-        if (!err && stats.isFile()) {
-            console.log('200 ' + request.url);
-            response.writeHead(200, {'Content-Type': 'text/plain;charset=UTF-8'});
-            fs.createReadStream(filepath).pipe(response);
-        } else {
-            console.log('404 ' + request.url);
-            response.writeHead(404);
-            response.end('404 Not Found');
-        }
-    })
-});
+// let prvKey = loadKey('./rsa-prv.pem');
+// let pubKey = loadKey('./rsa-pub.pem');
+// let message = 'Hello, world!';
 
-server.listen(8080);
+// let enc_by_prv = crypto.privateEncrypt(prvKey, Buffer.from(message, 'utf8'));
+// console.log('encrypted by private key: ' + enc_by_prv.toString('hex'));
 
-console.log('Server is running at http://127.0.0.1:8080/');
+// let dec_by_pub = crypto.publicDecrypt(pubKey, enc_by_prv);
+// console.log('decrypted by public key: ' + dec_by_pub.toString('utf8'));
+
+
+let data = '0000001063786964be7acfcb97a942e8'
+let buf = new Buffer(data, 'hex')
+fs.writeFileSync('./cxid', buf)

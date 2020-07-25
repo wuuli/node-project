@@ -4,7 +4,7 @@
     "description": "Test nunjucks",
     "main": "app.js",
     "scripts": {
-        "start": "app.js"
+        "start": "node app.js"
     },
     "keywords": [
         "nunjucks",
@@ -17,6 +17,6 @@
         "url": "https://github.com/wuuli/node-project.git"
     },
     "dependencies": {
-        "nunjucks": "2.4.2"
+        "nunjucks": "^3.2.0"
     }
 }

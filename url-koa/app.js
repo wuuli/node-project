@@ -45,6 +45,7 @@ router.post('/signin', async (ctx, next) => {
     
 })
 
+// koa-bodyparser必须在router之前被注册到app对象上
 app.use(bodyParser());
 
 app.use(router.routes());
