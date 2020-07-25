@@ -1,0 +1,19 @@
+{
+  "name": "hello-sequelize",
+  "version": "1.0.0",
+  "description": "学习mysql",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "mysql",
+    "sequelize"
+  ],
+  "author": "xulin",
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "3.24.1",
+    "mysql": "2.11.1"
+  }
+}
