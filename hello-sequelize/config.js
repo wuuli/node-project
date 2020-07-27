@@ -1,4 +1,5 @@
 var config = {
+    dialect: 'mysql',
     database: 'test', // 使用哪个数据库
     username: 'www', // 用户名
     password: 'www', // 口令
