@@ -98,5 +98,21 @@ function defineModel(name, attributes) {
 const TYPES = ['STRING', 'INTEGER', 'BIGINT', 'TEXT', 'DOUBLE', 'DATEONLY', 'BOOLEAN'];
 
 let exp = {
-    
+    defineModel: defineModel,
+    sync: () => {
+        if (process.env.NODE_ENV !== 'production') {
+            sequelize.sync({ force: true });
+        } else {
+            throw new Error('Cannot sync() when NODE_ENV is set to \'production\'.')
+        }
+    }
 }
+
+for(let type of TYPES) {
+    exp[type] = Sequelize[type];
+}
+
+exp.ID = ID_TYPE;
+exp.generateId = generateId;
+
+module.exports = exp;
