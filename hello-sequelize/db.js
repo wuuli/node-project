@@ -34,7 +34,7 @@ function defineModel(name, attributes) {
     }
     attrs.id = {
         type: ID_TYPE,
-        primaryKay: true
+        primaryKey: true
     }
     attrs.createdAt = {
         type: Sequelize.BIGINT,
@@ -101,7 +101,7 @@ let exp = {
     defineModel: defineModel,
     sync: () => {
         if (process.env.NODE_ENV !== 'production') {
-            sequelize.sync({ force: true });
+            return sequelize.sync({ force: true });
         } else {
             throw new Error('Cannot sync() when NODE_ENV is set to \'production\'.')
         }
