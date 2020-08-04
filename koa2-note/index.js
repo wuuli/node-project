@@ -17,18 +17,6 @@ const app = new Koa()
 //     })
 // }
 
-function parsePostData (ctx) {
-    return new Promise((resolve, reject) => {
-        let postData = ""
-        ctx.req.addListenter('data', (data) => {
-            postData += data
-        })
-        ctx.req.addListenter('end', () => {
-            let parseData = 
-        })
-    })
-}
-
 // log
 app.use(async (ctx, next) => {
     const start = Date.now()
